@@ -1,6 +1,8 @@
 import { HeadConfig, defineConfig } from 'vitepress';
 import zhNav from './zh.nav';
 import zhSidebar from './zh.sidebar';
+import esNav from './es.nav';
+import esSidebar from './es.sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -742,6 +744,15 @@ export default defineConfig({
       themeConfig: {
         nav: zhNav,
         sidebar: zhSidebar,
+      },
+    },
+    es: {
+      label: 'Español',
+      lang: 'es',
+      link: '/es/',
+      themeConfig: {
+        nav: esNav,
+        sidebar: esSidebar,
       },
     },
   },
