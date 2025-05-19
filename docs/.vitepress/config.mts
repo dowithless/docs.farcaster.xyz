@@ -9,6 +9,7 @@ export default defineConfig({
   title: 'Farcaster Docs',
   titleTemplate: ':title / Farcaster Docs',
   description: 'Documentation for the Farcaster protocol',
+  lastUpdated: true,
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/icon.png' }],
     ['meta', { property: 'og:type', content: 'website' }],
