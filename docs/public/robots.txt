@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs-farcaster-xyz.vercel.app/sitemap.xml

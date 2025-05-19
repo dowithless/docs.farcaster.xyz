@@ -13,7 +13,10 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/icon.png' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: '/og-image.png' }],
-    ['meta', { property: 'og:url', content: 'https://farcaster.xyz' }],
+    [
+      'meta',
+      { property: 'og:url', content: 'https://docs-farcaster-xyz.vercel.app' },
+    ],
     [
       'meta',
       {
@@ -37,6 +40,38 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-H2KGK9MSG');`,
+    ],
+    [
+      'link',
+      {
+        rel: 'alternate',
+        hreflang: 'en',
+        href: 'https://docs-farcaster-xyz.vercel.app',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'alternate',
+        hreflang: 'zh',
+        href: 'https://docs-farcaster-xyz.vercel.app/zh',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'alternate',
+        hreflang: 'es',
+        href: 'https://docs-farcaster-xyz.vercel.app/es',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'alternate',
+        hreflang: 'x-default',
+        href: 'https://docs-farcaster-xyz.vercel.app/',
+      },
     ],
   ],
   transformHead(context) {
@@ -745,6 +780,9 @@ export default defineConfig({
         nav: zhNav,
         sidebar: zhSidebar,
       },
+      title: 'Farcaster 文档',
+      titleTemplate: ':title / Farcaster 文档',
+      description: 'Farcaster 协议文档',
     },
     es: {
       label: 'Español',
@@ -754,6 +792,12 @@ export default defineConfig({
         nav: esNav,
         sidebar: esSidebar,
       },
+      title: 'Documentación de Farcaster',
+      titleTemplate: ':title / Documentación de Farcaster',
+      description: 'Documentación del protocolo Farcaster',
     },
+  },
+  sitemap: {
+    hostname: 'https://docs-farcaster-xyz.vercel.app',
   },
 });
